@@ -130,14 +130,15 @@ $(document).ready(function() {
         $(".wrapping").css({ "background-image": gameData[currentQuestion[arrayCycle]]["image"] });
         $("#newbuttons").html("Correct Answer : " + gameData[currentQuestion[arrayCycle]]["correct"]);
         //these lines check tos see if your answer was correct or not
+        $("#print").animate({ fontSize: "70px", borderWidth: "8px" }, { duration: 300, easing: "swing" });
         if (button == gameData[currentQuestion[arrayCycle]]["correct"]) {
-            $("#print").animate({ fontSize: "190px", borderWidth: "20px" }, { duration: 300, easing: "swing" }).html("Good Job");
+            $("#print").html("Good Job");
             correct++;
         } else if (time == 0) {
-            $("#print").animate({ fontSize: "190px", borderWidth: "20px" }, { duration: 300, easing: "swing" }).html("Time's Up");
-            timeout++
+            $("#print").html("Time's Up");
+            timeout++;
         } else {
-            $("#print").animate({ fontSize: "190px", borderWidth: "20px" }, { duration: 300, easing: "swing" }).html("Try Again!");
+            $("#print").html("Try Again!");
             wrong++;
         }
     }; //!<--ends the printToScreen function
