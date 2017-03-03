@@ -5,35 +5,35 @@ $(document).ready(function() {
     //This object contains all of the info for the game. Each question will have a choice of words, a correct answer, and an image
     var gameData = {
             "question-one": {
-                "question": "Which?",
-                "choices": ["Help", "Try", "Word", "Film"],
-                "correct": "Film",
+                "question": "If I multiply any even number by 1,895, what will be in the ones column?",
+                "choices": ["0", "Random", "3", "It's a trick"],
+                "correct": "0",
                 "image": 'url("assets/images/color.png")'
             },
             "question-two": {
-                "question": "Which number is correct?",
-                "choices": [2, 6, 9, 12],
-                "correct": 2
+                "question": "Without using a calculator, what number did I multiply by 11 to get 737?",
+                "choices": ["737 is prime", "52", " 71", "67"],
+                "correct": "67"
             },
             "question-three": {
-                "question": "Pick number 11 already",
+                "question": "This one is a freebie, pick index number 3 already",
                 "choices": [3, 4, 11, 1],
-                "correct": 11
+                "correct": 1
             },
             "question-four": {
-                "question": "Pick one of these four words",
-                "choices": ["This", "That", "How", "When"],
-                "correct": "How"
+                "question": "Pick ['one'] of these four words",
+                "choices": ["'one'", "'That'", "'How'", "'When'"],
+                "correct": "'one'"
             },
             "question-five": {
-                "question": "New Question",
-                "choices": ["One", "Two", "Three", "Four"],
-                "correct": "Four"
+                "question": "If I passed one parameter to this function doStuff(Four){var a = Four * 3; console.log(a);} and a = 18, how'd I call the function",
+                "choices": ["On, 'Click'", "dostuff(Four = ('6'));", "DOstuff(6){};", "doStuff(6);"],
+                "correct": "doStuff(6);"
             },
             //!<--end of question section of gameData object
             "gameMechanics": {
                 timerCount: function() {
-                    time = 15;
+                    time = 30;
                     timeControl = setInterval(this.timer, 1000);
                     $("#timer").addClass("time-display").html(time + " seconds remaining");
                 }, //!<--ends timeCount function 
@@ -60,7 +60,7 @@ $(document).ready(function() {
     var arrayCycle = -1;
     //this stores the interval and timer 
     var timeControl;
-    var time = 15;
+    var time = 0;
     // variables for correct, incorrect, and timeouts
     var correct = 0;
     var wrong = 0;
@@ -70,7 +70,7 @@ $(document).ready(function() {
     //test switch for problem solving, will be removed in final version
     //kept it in to control reset function
     $("#play").on("click", function() {
-        gameData["gameMechanics"]["initialize"]()
+        gameData.gameMechanics.initialize()
     });
     //this function resets certain style changes and generates question text
     //also controls the end state and makes the play button reappear	
