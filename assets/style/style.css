@@ -1,5 +1,5 @@
 body {
-	background-image:url("../images/blur.png"),url("../images/radial.png"), url("../images/color2.png");
+	background-image:url("../images/shadow.png") ,url("../images/blur.png"),url("../images/radial.png"), url("../images/color2.png");
 	background-size: 100px;
 	background-color: black;
 	text-shadow: -2px 0 1px black, 2px 0 1px black, 0 -2px 1px black, 0 2px 1px black;
@@ -33,7 +33,7 @@ body {
 	box-shadow: 0 0 0 0 white;
 }
 .time-display {
-    font-family: "Black Ops One";
+    font-family: "Work Sans";
 	text-align: center;
 	padding: 20px 20px;
 	font-size: 30px;
@@ -44,7 +44,7 @@ body {
     margin: 20px auto;
 }
 #newbuttons {
-    font-family: "Black Ops One";
+    font-family: "Work Sans";
 	margin: 20px auto;
 	color: white;
 	font-size: 25px;
@@ -78,6 +78,7 @@ body {
     width: 100%;
 }
 .button-wrap {
+    font-family: "Cutive";
     text-align: center;
     margin: 25px auto;
     overflow: hidden;
@@ -104,10 +105,13 @@ h1 {
 }
 #question-text {
     font-family: "Cutive";
-    background-image: url("../images/radial.png");
     text-align: center;
-	font-size: 40px;
-	color: white;
+    font-size: 40px;
+    color: white;
+}
+.wrapping {
+    font-family: "Work Sans";
+    background-size: cover;
 }
 #print {
     color: white;

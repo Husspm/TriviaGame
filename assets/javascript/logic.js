@@ -6,29 +6,33 @@ $(document).ready(function() {
     var gameData = {
             "question-one": {
                 "question": "If I multiply any even number by 1,895, what will be in the ones column?",
-                "choices": ["0", "Random", "3", "It's a trick"],
+                "choices": ["0", "Random", "3"],
                 "correct": "0",
                 "image": 'url("assets/images/color.png")'
             },
             "question-two": {
                 "question": "Without using a calculator, what number did I multiply by 11 to get 737?",
                 "choices": ["737 is prime", "52", " 71", "67"],
-                "correct": "67"
+                "correct": "67",
+                "image": 'url("assets/images/spinblur.png")'
             },
             "question-three": {
                 "question": "This one is a freebie, pick index number 3 already",
                 "choices": [3, 4, 11, 1],
-                "correct": 1
+                "correct": 1,
+                "image": 'url("assets/images/pixelblur.png")'
             },
             "question-four": {
-                "question": "Pick ['one'] of these four words",
-                "choices": ["'one'", "'That'", "'How'", "'When'"],
-                "correct": "'one'"
+                "question": "If I switch from using rgb color schemes to rgba(the a stands for alpha), what does the a control",
+                "choices": ["Nothing", "Sepia filter", "Opacity"],
+                "correct": "Opacity",
+                "image": 'url("assets/images/lines.png")'
             },
             "question-five": {
-                "question": "If I passed one parameter to this function doStuff(Four){var a = Four * 3; console.log(a);} and a = 18, how'd I call the function",
-                "choices": ["On, 'Click'", "dostuff(Four = ('6'));", "DOstuff(6){};", "doStuff(6);"],
-                "correct": "doStuff(6);"
+                "question": "How many keys are there on a Piano",
+                "choices": ["70", "88", "65", "42"],
+                "correct": "88",
+                "image": 'url("assets/images/shadow2.png")'
             },
             //!<--end of question section of gameData object
             "gameMechanics": {
@@ -85,7 +89,7 @@ $(document).ready(function() {
             if (arrayCycle == currentQuestion.length) {
                 $(".button-wrap").toggleClass("hide");
                 $("#question-text").html("Game Over!");
-                $("#newbuttons").html("correct : " + correct + "<br>" + "wrong : " + wrong + "<br>" + "timeout : " + timeout + "<br>");
+                $("#newbuttons").html("Questions you got right : " + correct + "<br>" + "Questions you got wrong : " + wrong + "<br>" + "Times you just didn't guess at all : " + timeout + "<br>");
                 $("#timer").html(" ").removeClass("time-display");
                 clearInterval(timeControl);
             } else {
