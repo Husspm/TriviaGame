@@ -130,7 +130,7 @@ $(document).ready(function() {
         $(".wrapping").css({ "background-image": gameData[currentQuestion[arrayCycle]]["image"] });
         $("#newbuttons").html("Correct Answer : " + gameData[currentQuestion[arrayCycle]]["correct"]);
         //these lines check tos see if your answer was correct or not
-        $("#print").animate({ fontSize: "70px", borderWidth: "8px" }, { duration: 300, easing: "swing" });
+        $("#print").animate({ fontSize: "70px", borderWidth: "8px" }, { duration: 800, easing: "swing" });
         if (button == gameData[currentQuestion[arrayCycle]]["correct"]) {
             $("#print").html("Good Job");
             correct++;
