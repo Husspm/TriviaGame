@@ -89,7 +89,7 @@ $(document).ready(function() {
             if (arrayCycle == currentQuestion.length) {
                 $(".button-wrap").toggleClass("hide");
                 $("#question-text").html("Game Over!");
-                $("#newbuttons").html("Questions you got right : " + correct + "<br>" + "Questions you got wrong : " + wrong + "<br>" + "Times you just didn't guess at all : " + timeout + "<br>");
+                $("#newbuttons").html("Questions right : " + correct + "<br>" + "Questions wrong : " + wrong + "<br>" + "didn't guess at all : " + timeout + "<br>");
                 $("#timer").html(" ").removeClass("time-display");
                 clearInterval(timeControl);
             } else {

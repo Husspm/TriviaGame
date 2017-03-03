@@ -57,6 +57,7 @@ body {
     background-size: 20px;
     display: inline-flex;
     justify-content: space-around;
+    width: 100%;
 }
 .select, .select2 {
     border: inset 6px #979797;
@@ -119,4 +120,19 @@ h1 {
     text-shadow: 11px -20px 575px rgba(255, 243, 0, 0.42);
     font-size: 20px;
     border: solid 0px white;
+}
+@media screen and (max-width: 620px) {
+ .button-wrap {
+    width: 91%;
+ }
+#newbuttons {
+    display: block;
+}
+ .select {
+    display: block;
+    width: 91%;
+ }   
+ .time-display {
+    width: 95%;
+ }
 }
