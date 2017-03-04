@@ -79,7 +79,7 @@ $(document).ready(function() {
     //this function resets certain style changes and generates question text
     //also controls the end state and makes the play button reappear	
     function changeQuestion() {
-        if (locked == false) { //<--prevents execution until locked is set back to false
+        if (locked == false) { //<--prevents execution until locked is set back to false, not really needed since I hid the reset button
             clearInterval(timeControl);
             arrayCycle++;
             $("#print").html(" ");
@@ -129,8 +129,8 @@ $(document).ready(function() {
         $("#print").css({ "font-size": "0px", "border-width": "0px" });
         $(".wrapping").css({ "background-image": gameData[currentQuestion[arrayCycle]]["image"] });
         $("#newbuttons").html("Correct Answer : " + gameData[currentQuestion[arrayCycle]]["correct"]);
-        //these lines check tos see if your answer was correct or not
         $("#print").animate({ fontSize: "70px", borderWidth: "8px" }, { duration: 800, easing: "swing" });
+        //these lines check to see if your answer was correct or not
         if (button == gameData[currentQuestion[arrayCycle]]["correct"]) {
             $("#print").html("Good Job");
             correct++;
