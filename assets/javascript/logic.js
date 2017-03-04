@@ -4,7 +4,7 @@ $(document).ready(function() {
     var currentQuestion = ["question-one", "question-two", "question-three", "question-four", "question-five"];
     //This object contains all of the info for the game. Each question will have a choice of words, a correct answer, and an image
     var gameData = {
-            "question-one": {
+         "question-one": {
                 "question": "If I multiply any even number by 1,895, what will be in the ones column?",
                 "choices": ["0", "Random", "3"],
                 "correct": "0",
